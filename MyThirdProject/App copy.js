@@ -1,11 +1,27 @@
 import React from 'react';
 import {Text, TextInput, View } from 'react-native';
 
-export default function Student() {
+function Student(props) {
   return (
     <View>
-      <Text>i am student in cis340</Text>
+      <Text>Hey my name is {props.name}, I am student in cis340</Text>
     </View>
   );
 }
 
+export default function MultiCoomp()
+{return(
+  <View style={{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }}>
+    <Text>Welcome to cis340 </Text>
+      <Student name="West Gajan"/>
+      <Student name="Jack smith"/>
+      <Student name="jane gee"/>
+      <Student name="ALexx Trey" />
+    
+  </View>
+  );
+}
